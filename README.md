@@ -60,9 +60,13 @@ insmod  /lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/
 root@armbian:~# cat /etc/modules
 
 cfg80211
+
 wlan_mt76x8_sdio
 
 depmod -a
+
+<img width="1165" height="241" alt="image" src="https://github.com/user-attachments/assets/dc282fd3-a3e1-4533-9735-e63294f6bb85" />
+
 
 重启，开机后看下WiFi驱动是否正常加载
 
@@ -70,9 +74,12 @@ depmod -a
 5.加载这个驱动后，会导致有线掉IP，需要配置
 nano /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
 
+
 [ethernet]
 duplex=full
 speed=100
+
+
 <img width="489" height="172" alt="image" src="https://github.com/user-attachments/assets/4a74bde5-5223-44bc-aa88-91232eee4193" />
 
 
