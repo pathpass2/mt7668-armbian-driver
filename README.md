@@ -1,5 +1,5 @@
 从https://github.com/fujianzz/mt7668-armbian处fork   设备：云南电信ty1608-高安版  安卓4.4.2   s905l3b   mt7668的无线模块
-大佬仓库的代码有一点小问题   在Armbian OS 25.08.0  5.15.187-ophub 下编译总是报错，不管是armbian本机编译还是ubuntu22.04交叉编译都报错，根据ai提示改了下，实测armbian-5.15.187本机上编译通过.并成功加载WiFi
+大佬仓库的代码有一点小问题   在Armbian OS 25.08.0-5.15.187-ophub 下编译总是报错，不管是armbian本机编译还是ubuntu22.04交叉编译都报错，根据ai提示改了下，实测armbian-5.15.187本机上编译通过.并成功加载WiFi
 
 <img width="1306" height="735" alt="image" src="https://github.com/user-attachments/assets/377477c6-9a89-4528-81c0-64d5b73b7d65" />
 
@@ -33,9 +33,6 @@ cd mt7668-armbian/MT7668-WiFi
 nano Makefile.x86
 #第3行 ,  第28行的x86改成arm64
 修改src路径为linux-header src路径
-
-<img width="1083" height="814" alt="image" src="https://github.com/user-attachments/assets/46a742c2-a444-4c7e-bc64-acc39239b6d3" />
-
 
 
 <img width="1090" height="541" alt="image" src="https://github.com/user-attachments/assets/e886e21a-15e6-4f5f-962c-683d8bd50897" />
@@ -77,7 +74,7 @@ duplex=full
 speed=100
 ![image](https://github.com/fujianzz/mt7668-armbian/assets/25293511/6ff3311a-2e37-495c-a377-6a4e03d137fc)
 
-加载完驱动  连接WiFi后的效果
+加载完驱动  连接WiFi后的效果  只测试了WiFi  蓝牙未测试
 <img width="1294" height="415" alt="image" src="https://github.com/user-attachments/assets/ee0b8216-a1f4-4aae-ab6a-9f0834fb1fcd" />
 
 <img width="1174" height="166" alt="image" src="https://github.com/user-attachments/assets/06fda2db-15e8-4df9-b071-edc55ff01527" />
