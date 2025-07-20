@@ -52,9 +52,12 @@ cp -a drv_wlan/MT6632/wlan/{wlan_mt76x8_sdio.ko,wlan_mt76x8.ko}   /lib/modules/5
 
 cp -a  7668_firmware/* /usr/lib/firmware/
 
+modprobe  cfg80211
+
 insmod  /lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/wlan_mt76x8_sdio.ko
 
 
+depmod -a
 
 添加到/etc/modules
 root@armbian:~# cat /etc/modules
@@ -63,9 +66,9 @@ cfg80211
 
 wlan_mt76x8_sdio
 
-depmod -a
 
-<img width="1165" height="241" alt="image" src="https://github.com/user-attachments/assets/dc282fd3-a3e1-4533-9735-e63294f6bb85" />
+
+
 
 
 重启，开机后看下WiFi驱动是否正常加载
