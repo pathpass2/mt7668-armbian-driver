@@ -1072,7 +1072,7 @@ kalIndicateStatusAndComplete(IN P_GLUE_INFO_T prGlueInfo, IN WLAN_STATUS eStatus
 
 				#if KERNEL_VERSION(4, 14, 0) <= CFG80211_VERSION_CODE
 				memset(&roam_info, 0, sizeof(struct cfg80211_roam_info));
-				#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 78)
+				#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 16, 78)
 				roam_info.links[0].channel = prChannel;
 				roam_info.links[0].bssid = arBssid;
 				#else
