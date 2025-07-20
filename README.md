@@ -1,4 +1,4 @@
-从https://github.com/fujianzz/mt7668-armbian处fork   设备：云南电信ty1608-高安版  安卓4.4.2   s905l3b   mt7668的无线模块
+从https://github.com/fujianzz/mt7668-armbian处fork   设备：云南电信ty1608-高安版  安卓4.4.2   s905l3b mt7668的无线模块    通过tf卡启动，未写入emmc，保留了原IPTV   
 大佬仓库的代码有一点小问题   在Armbian OS 25.08.0-5.15.187-ophub 下编译总是报错，不管是armbian本机编译还是ubuntu22.04交叉编译都报错，根据ai提示改了下，实测armbian-5.15.187本机上编译通过.并成功加载WiFi
 
 <img width="1306" height="735" alt="image" src="https://github.com/user-attachments/assets/377477c6-9a89-4528-81c0-64d5b73b7d65" />
