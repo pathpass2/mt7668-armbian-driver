@@ -69,10 +69,12 @@ depmod -a
 
 5.加载这个驱动后，会导致有线掉IP，需要配置
 nano /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
-[ethernet]下添加
+
+[ethernet]
 duplex=full
 speed=100
-![image](https://github.com/fujianzz/mt7668-armbian/assets/25293511/6ff3311a-2e37-495c-a377-6a4e03d137fc)
+<img width="489" height="172" alt="image" src="https://github.com/user-attachments/assets/4a74bde5-5223-44bc-aa88-91232eee4193" />
+
 
 加载完驱动  连接WiFi后的效果  只测试了WiFi  蓝牙未测试
 <img width="1294" height="415" alt="image" src="https://github.com/user-attachments/assets/ee0b8216-a1f4-4aae-ab6a-9f0834fb1fcd" />
