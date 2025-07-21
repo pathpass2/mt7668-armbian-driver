@@ -29,7 +29,7 @@ ln -sf /usr/local/arm-gnu-toolchain-14.2.rel1-aarch64-aarch64-none-elf/bin/aarch
 
 编译mt7688
 
-cd mt7668-armbian/MT7668-WiFi
+cd mt7668-armbian-driver/MT7668-WiFi
 nano Makefile.x86
 #第3行 ,  第28行的x86改成arm64
 修改src路径为linux-header src路径
@@ -46,15 +46,15 @@ make  EXTRA_CFLAGS="-w" CROSS_COMPILE= -f Makefile.x86 -j4
 <img width="1302" height="301" alt="image" src="https://github.com/user-attachments/assets/506086d0-a9b6-4466-a2b6-4960bd698dc1" />
 
 
-mkdir  /lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668
+mkdir  /usr/lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668
 
-cp -a drv_wlan/MT6632/wlan/{wlan_mt76x8_sdio.ko,wlan_mt76x8.ko}   /lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/
+cp -a drv_wlan/MT6632/wlan/{wlan_mt76x8_sdio.ko,wlan_mt76x8.ko}   /usr/lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/
 
 cp -a  7668_firmware/* /usr/lib/firmware/
 
 modprobe  cfg80211
 
-insmod  /lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/wlan_mt76x8_sdio.ko
+insmod  /usr/lib/modules/5.15.187-ophub/kernel/drivers/net/wireless/mediatek/mt7668/wlan_mt76x8_sdio.ko
 
 
 depmod -a
